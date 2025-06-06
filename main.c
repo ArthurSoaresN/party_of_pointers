@@ -100,6 +100,12 @@ int main() {
 	}
 	free(names);
 	
+	// Pointer to function pointers
+	int (*funcs[])(int, int) = { add, sub, mult, division };
+	
+	for (int i = 0; i < 4; i++) {
+			printf(" Result[%d] = %d\n", i, funcs[i](10,20));
+	}
 	
 
 	
