@@ -13,6 +13,22 @@ typedef struct {
 #define MULTIPLICATION 2
 #define DIVISION 3
 
+int add (int a, int b) {
+	return a + b;
+	}
+	
+int sub (int a, int b) {
+	return a - b;
+}
+
+int mult (int a, int b) {
+	return a * b;
+}
+
+int division (int a, int b) {
+	return a / b;
+}
+
 int main() {
 	
 	return 0;
