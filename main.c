@@ -43,6 +43,20 @@ void insert_names (char** names, int hmany) {
 
 int main() {
 	
+	printf(" \n --- Party of Pointers --- \n\n");
+	// Variable -> Address and Value (e.g., 20)
+	// Pointer -> Address and Value (Holds the address of another variable)
+	
+	// --- Simple Pointer ---
+	int num = 20;
+	printf (" num = %d\n", num);
+	
+	int *ptr = &num; // & Reference operator (Shows the address)
+	*ptr = 40; // Modifying the value of the 'num' variable through the pointer
+	
+	printf (" num = %d\n", num);
+
+	
 	return 0;
 }
 
