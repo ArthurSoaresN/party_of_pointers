@@ -107,7 +107,20 @@ int main() {
 			printf(" Result[%d] = %d\n", i, funcs[i](10,20));
 	}
 	
-
+	int test = funcs[ADD](20,25);
+	int test1 = funcs[DIVISION](6,2);
+	int test2 = funcs[MULTIPLICATION](2,2);
+	int test3 = funcs[SUBTRACTION](100,20);
+	
+	
+	printf(" %d\n", test);
+	printf(" %d\n", test1);
+	printf(" %d\n", test2);
+	printf(" %d\n", test3);
+	
+	printf("\n");
+	
+	printf(" End\n");
 	
 	return 0;
 }
