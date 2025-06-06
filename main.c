@@ -81,6 +81,14 @@ int main() {
 	free(person);
 	
 	// note: free was used on the variables that used malloc
+	
+	// --- Pointer to Function ---
+	
+	// Pointer to function add
+	int (*func)(int, int) = add;
+	
+	printf(" Result: %d\n", add(5,10));
+	printf(" Result: %d\n", func(10,12));
 
 	
 	return 0;
