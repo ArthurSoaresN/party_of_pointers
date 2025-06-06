@@ -89,6 +89,18 @@ int main() {
 	
 	printf(" Result: %d\n", add(5,10));
 	printf(" Result: %d\n", func(10,12));
+	
+	// --- Pointer to Pointers ---
+	int hmany = 5;
+	char **names = malloc(sizeof(char*) * hmany); 
+	insert_names(names, hmany);
+	for (int i = 0; i < hmany; i++) {
+		printf(" name[%d] = %s\n", i, names[i]);
+		free(names[i]);
+	}
+	free(names);
+	
+	
 
 	
 	return 0;
