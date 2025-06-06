@@ -55,6 +55,12 @@ int main() {
 	*ptr = 40; // Modifying the value of the 'num' variable through the pointer
 	
 	printf (" num = %d\n", num);
+	
+	// --- Pointer to String ---
+	char *string = malloc(sizeof(char)*23); // Points to the first character of the array
+	strcpy(string, "You're the best around");
+	printf(" string = %s\n", string);
+	free(string); // Free memory
 
 	
 	return 0;
