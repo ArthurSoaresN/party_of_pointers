@@ -61,6 +61,26 @@ int main() {
 	strcpy(string, "You're the best around");
 	printf(" string = %s\n", string);
 	free(string); // Free memory
+	
+	// --- Pointer to Struct ---
+	
+	// With typedef, Person becomes an 'alias' for a type (in this case defined as struct)
+	// Declaration of a pointer of struct type:
+	// '->' syntax for struct pointers, in this case '*char'
+	Person *person = malloc(sizeof(Person));
+	person->age = 40;
+	person->name = malloc(sizeof(char) *5);
+	strcpy(person->name, "JOHN");
+	
+	printf(" Name:%s, Age:%d\n", person->name, person->age);
+	
+	// To free the memory used by the struct, first free the struct's variables
+	// then the struct itself. Otherwise, the address of the variables will be lost without freeing memory
+	
+	free(person->name);
+	free(person);
+	
+	// note: free was used on the variables that used malloc
 
 	
 	return 0;
